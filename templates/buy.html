@@ -134,10 +134,33 @@
 
 
 </head>
+
 <body>
 
 {#<h1>Product {{ product.productname }}</h1>#}
 {#<h1>Price {{ product.productprice }}</h1>#}
+<style>
+    input[type=text] {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000000;
+    }
+    input[type=email] {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000000;
+    }
+    input[type=number] {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000000;
+    }
+    input[type=date] {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #000000;
+    }
+</style>
 <div class="site-section bg-light " id="contact-section">
     <div class="container">
         <div class="row mb-5">
@@ -180,8 +203,8 @@
                             <label class=" text-black" for="branch">Branch</label>
                             <!--<input type="text" id="country" name="country" class="form-control rounded-0" required>-->
                             <select name="country" class="form-control rounded-10" id="country" required>
-                                <option value="India" selected>India</option>
-                                {% for i,k in country %}
+                                <option value="India" selected>-none-</option>
+                                {% for i in dictionary %}
                                     <option value="{{ i }}">{{ i }} </option>
                                 {% endfor %}
                             </select>
@@ -304,7 +327,8 @@
                             <label class="text-black" for="fatoccu">Designation</label>
                             <input type="text" id="fatoccu" name="city" class="form-control rounded-0" required>
                         </div>
-                    </div><div class="row form-group">
+                    </div>
+                    <div class="row form-group">
                         <div class="col-md-6 mb-3 mb-md-0">
                             <label class="text-black" for="fathername">Section/Site</label>
                             <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
