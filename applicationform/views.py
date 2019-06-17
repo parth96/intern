@@ -13,6 +13,11 @@ def index(request):
     'Environment Science':15,'Mass Communication':16,'Micro - Biology':17,'Logistics':18,'MCA':19}
     return render(request, 'buy.html', {'dictionary': branch})
 
+def index(request):
+    category = {'GEN':1,'OBC':2,'SC':3,'ST':4,'Others':5,}
+    return render(request, 'buy.html', {'dictionary1': category})
+
+
 
 def exam(request):
     return HttpResponse("hello world")

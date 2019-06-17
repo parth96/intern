@@ -145,16 +145,19 @@
         border: none;
         border-bottom: 1px solid #000000;
     }
+
     input[type=email] {
         background: transparent;
         border: none;
         border-bottom: 1px solid #000000;
     }
+
     input[type=number] {
         background: transparent;
         border: none;
         border-bottom: 1px solid #000000;
     }
+
     input[type=date] {
         background: transparent;
         border: none;
@@ -162,212 +165,249 @@
     }
 </style>
 <div class="site-section bg-light " id="contact-section">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <h3 class="section-sub-title">Please Enter the Details</h3>
-                {#                <h2 class="section-title mb-3">Get In Touch</h2>#}
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-7 mb-5">
+    {#    <div class="container">#}
+    {#        <div class="row mb-5">#}
+    {#            <div class="col-12 text-center">#}
+    {#                <h3 class="section-sub-title"></h3>#}
+    {#                <h2 class="section-title mb-3">Get In Touch</h2>#}
+    {#            </div>#}
+    {#        </div>#}
+    <div class="row justify-content-center">
+        <div class="col-md-7 mb-5">
 
 
-                <form action="" method="post" class="p-5 bg-white">
-                    {% csrf_token %}
+            <form action="" method="post" class="p-5 bg-white">
+                {% csrf_token %}
 
-                    <h2 class="h1 text-black mb-5">Shipping Address</h2>
+                <h2 class="h1 text-black mb-lg-5">OIL AND NATURAL GAS LTD.</h2>
 
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <label class="text-black" for="fname">Name</label>
-                            <input type="text" id="fname" name="name" class="form-control rounded-0" required>
-                        </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-black" for="fname">Name</label>
+                        <input type="text" id="fname" name="name" class="form-control rounded-0" required>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control rounded-0" required>
                     </div>
 
-                    <div class="row form-group">
-
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control rounded-0" required>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="text-black" for="phone">Contact Number</label>
-                            <input type="text" id="phone" name="phone" pattern=".{10,}" required
-                                   title="10 digit minimum" class="form-control rounded-0">
-                        </div>
+                    <div class="col-md-6">
+                        <label class="text-black" for="phone">Contact Number</label>
+                        <input type="text" id="phone" name="phone" pattern=".{10,}" required
+                               title="10 digit minimum" class="form-control rounded-0">
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-6">
-                            <label class=" text-black" for="branch">Branch</label>
-                            <!--<input type="text" id="country" name="country" class="form-control rounded-0" required>-->
-                            <select name="country" class="form-control rounded-10" id="country" required>
-                                <option value="India" selected>-none-</option>
-                                {% for i in dictionary %}
-                                    <option value="{{ i }}">{{ i }} </option>
-                                {% endfor %}
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label class="text-black" for="Category">Category</label>
-                            <input type="text" id="category" name="number" class="form-control rounded-0">
-                        </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
+                        <label class=" text-black" for="branch">Branch</label>
+                        <!--<input type="text" id="country" name="country" class="form-control rounded-0" required>-->
+                        <select name="country" class="form-control rounded-10" id="country" required>
+                            <option value="India" selected>-none-</option>
+                            {% for i in dictionary %}
+                                <option value="{{ i }}">{{ i }} </option>
+                            {% endfor %}
+                        </select>
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">Father's name</label>
-                            <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">Father's Occupation</label>
-                            <input type="text" id="fatoccu" name="city" class="form-control rounded-0" required>
-                        </div>
+                    <div class="col-md-6">
+                        <label class="text-black" for="Category">Category</label>
+                        <!--<input type="text" id="country" name="country" class="form-control rounded-0" required>-->
+                        <select name="country" class="form-control rounded-10" id="country" required>
+                            <option value="India" selected>-none-</option>
+                            {% for i in dictionary1 %}
+                                <option value="{{ i }}">{{ i }} </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">Father's name</label>
+                        <input type="text" id="fatname" name="" class="form-control rounded-0" required>
                     </div>
 
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <label class="text-black" for="fname">Date of Birth</label>
-                            <input type="date" name="bday" class="form-control rounded-0" required>
-                        </div>
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">Father's Occupation</label>
+                        <input type="text" id="fatoccu" name="" class="form-control rounded-0" required>
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <label class="text-black" for="fname">Gender</label>
-                            <input type="radio" name="gender" value="male"> Male
-                            <input type="radio" name="gender" value="female"> Female<br>
-                        </div>
-                    </div>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">Designation</label>
-                            <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
-                        </div>
+                </div>
 
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">CPF</label>
-                            <input type="number" id="fatoccu" name="city" class="form-control rounded-0" required>
-                        </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-black" for="fname">Date of Birth</label>
+                        <input type="date" name="bday" class="form-control rounded-0" required>
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">Section</label>
-                            <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
-                        </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-black" for="fname">Gender</label>
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female<br>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">Designation</label>
+                        <input type="text" id="fatname" name="" class="form-control rounded-0" required>
+                    </div>
 
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">Location</label>
-                            <input type="number" id="fatoccu" name="city" class="form-control rounded-0" required>
-                        </div>
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">CPF</label>
+                        <input type="number" id="fatoccu" name="" class="form-control rounded-0" required>
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">PhoneNo</label>
-                            <input type="number" id="fatname" name="state" class="form-control rounded-0" required>
-                        </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">Section</label>
+                        <input type="text" id="fatname" name="" class="form-control rounded-0" required>
+                    </div>
 
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">MobileNo</label>
-                            <input type="number" id="fatoccu" name="city" class="form-control rounded-0" required>
-                        </div>
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">Location</label>
+                        <input type="number" id="fatoccu" name="city" class="form-control rounded-0" required>
                     </div>
-                    <h1>ACADEMIC DETAILS</h1>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">Institue's name</label>
-                            <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
-                        </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">PhoneNo</label>
+                        <input type="number" id="fatname" name="" class="form-control rounded-0" required>
+                    </div>
 
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">Present Branch</label>
-                            <input type="text" id="fatoccu" name="city" class="form-control rounded-0" required>
-                        </div>
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">MobileNo</label>
+                        <input type="number" id="fatoccu" name="" class="form-control rounded-0" required>
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">Semester/year</label>
-                            <input type="number" id="fatname" name="state" class="form-control rounded-0" required>
-                        </div>
+                </div>
+                <h1 class="h1 text-black mb-lg-5">ACADEMIC DETAILS</h1>
 
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">last sem %</label>
-                            <input type="number" id="fatoccu" name="city" class="form-control rounded-0" required>
-                        </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">Institue's name</label>
+                        <input type="text" id="fatname" name="" class="form-control rounded-0" required>
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <label class="text-black" for="address">Address (with Zip Code)</label>
-                            <textarea name="message" name="address" id="address" cols="30" rows="7"
-                                      class="form-control rounded-0"
-                                      placeholder="Enter your complete address with landmark" required></textarea>
-                        </div>
+
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">Present Branch</label>
+                        <input type="text" id="fatoccu" name="" class="form-control rounded-0" required>
                     </div>
-                    <h1>I
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <input type="text" id="fname" name="name" class="form-control rounded-0" required>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">Semester/year</label>
+                        <input type="number" id="fatname" name="" class="form-control rounded-0" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">last sem %</label>
+                        <input type="number" id="fatoccu" name="" class="form-control rounded-0" required>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <label class="text-black" for="address">Address (with Zip Code)</label>
+                        <textarea name="message" name="address" id="address" cols="30" rows="7"
+                                  class="form-control rounded-0"
+                                  placeholder="Enter your complete address with landmark" required></textarea>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div>I
+                            <div class="input-append">
+                                <input value="" autofocus="autofocus"/>
+                                <span class="unit"></span>
+
+                                son of
+                                {#                        <div class="row form-group">#}
+                                {#                            <div class="">#}
+                                {#                                <input type="text" id="fname" name="name" class="form-control " required>#}
+                                {#                                #}
+                                {#                            </div>#}
+                                {#                        </div>#}
+
+                                {#                        <div class="row form-group">#}
+                                {#                            <div class="">#}
+                                {#                                <input type="text" id="fname" name="name" class="form-control" required>#}
+                                {#                            </div>#}
+                                {#                        </div>#}
+                                request nodal agency for granting me the permission to undertake student's training in
+                                ONGC,of
+                                similar type,before.<br><br><br>
+                                <div class="container">
+                                    <div class="rounded-bottom" align="left">Date</div>
+                                    <div class="container">
+                                        <div class="rounded-bottom" align="right">Signature of Applicant</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        son of
-                        <div class="row form-group">
-                            <div class="col-md-12">
-                                <input type="text" id="fname" name="name" class="form-control rounded-0" required>
-                            </div>
-                        </div>
-                        request nodal agency for granting me the permission.....
-                    </h1>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">Mentor's name</label>
-                            <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">Designation</label>
-                            <input type="text" id="fatoccu" name="city" class="form-control rounded-0" required>
-                        </div>
                     </div>
-                    <div class="row form-group">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <label class="text-black" for="fathername">Section/Site</label>
-                            <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <div>I shall be responsible for the applicant's conduct and discipline during the student's
+                            training at ONGC.
+
                         </div>
 
-                        <div class="col-md-6">
-                            <label class="text-black" for="fatoccu">Location</label>
-                            <input type="text" id="fatoccu" name="city" class="form-control rounded-0" required>
+                        <div class="container">
+                            <div class="rounded-bottom" align="right"><br><br>Guardian/Parent signature</div>
                         </div>
                     </div>
 
-                    <div id="load" style="display: none" class="loader"></div>
-                    <div class="row form-group">
-                        <div class="col-md-12">
-                            <button data-js="open" class="btn btn-black rounded-0 py-3 px-4" type=button>Confirm
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">Mentor's name</label>
+                        <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">Designation</label>
+                        <input type="text" id="fatoccu" name="city" class="form-control rounded-0" required>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6 mb-3 mb-md-0">
+                        <label class="text-black" for="fathername">Section/Site</label>
+                        <input type="text" id="fatname" name="state" class="form-control rounded-0" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="text-black" for="fatoccu">Location</label>
+                        <input type="text" id="fatoccu" name="city" class="form-control rounded-0" required>
+                    </div>
+                </div>
+
+                <div id="load" style="display: none" class="loader"></div>
+                <div class="row form-group">
+                    <div class="col-md-12">
+                        <button data-js="open" class="btn btn-black rounded-0 py-3 px-4" type=button>Confirm
+                        </button>
+
+
+                        <div class="popup">
+                            <h2 id="pc">Product Cost</h2>
+                            <h2 id="dc">Delivery Cost</h2>
+                            <h2 id="tc">Total Cost</h2>
+
+                            <button name="close" class="btn btn-black rounded-0 py-3 px-4" type="button">Close
                             </button>
-
-
-                            <div class="popup">
-                                <h2 id="pc">Product Cost</h2>
-                                <h2 id="dc">Delivery Cost</h2>
-                                <h2 id="tc">Total Cost</h2>
-
-                                <button name="close" class="btn btn-black rounded-0 py-3 px-4" type="button">Close
-                                </button>
-                                <input type="submit" value="Place Order" class="btn btn-black rounded-0 py-3 px-4">
-                            </div>
-
-
+                            <input type="submit" value="Place Order" class="btn btn-black rounded-0 py-3 px-4">
                         </div>
+
+
                     </div>
+                </div>
 
 
-                </form>
-            </div>
-
+            </form>
         </div>
 
     </div>
+
+</div>
 </div>
 
 
