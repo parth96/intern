@@ -7,6 +7,53 @@ from django.template import RequestContext
 
 
 def index(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        fname = request.POST['fname']
+        foccu = request.POST['foccu']
+        bday = request.POST['bday']
+        gender = request.POST['gender']
+        desig = request.POST['desig']
+        cpf = request.POST['cpf']
+        section = request.POST['section']
+        city = request.POST['city']
+        phno = request.POST['phno']
+        mono = request.POST['mono']
+        insname = request.POST['insname']
+        brname = request.POST['brname']
+        sem = request.POST['sem']
+        semmarks = request.POST['semmarks']
+        address = request.POST['address']
+        menname = request.POST['menname']
+        des1 = request.POST['des1']
+        site = request.POST['site']
+        loc = request.POST['loc']
+
+        print(name)
+        print(email)
+        print(phone)
+        print(fname)
+        print(foccu)
+        print(bday)
+        print(gender)
+        print(desig)
+        print(cpf)
+        print(section)
+        print(city)
+        print(phno)
+        print(mono)
+        print(insname)
+        print(brname)
+        print(sem)
+        print(semmarks)
+        print(address)
+        print(menname)
+        print(des1)
+        print(site)
+        print(loc)
+
     branch = {'MBA(HR)': 1, 'MBA(Finance)': 2, 'Geology': 3, 'Geophysics': 4, 'MSc. - Chemistry': 5,
               'Mech.Engineering': 6,
               'Petroleum Engineering': 7, 'Electrical Engineering': 8, 'Chem.Engineering': 9, 'Civil Engineering': 10,
