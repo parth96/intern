@@ -145,20 +145,27 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col-md-6">
-                        <label class=" text-black" for="branch">Branch</label>
-                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->
-                        <select class="form-control rounded-10">
-                            <option selected>-none-</option>
-                            {% for i in dictionary %}
-                                <option value="{{ i }}">{{ i }} </option>
-                            {% endfor %}
-                        </select>
+                    <div class="col-md-12">
+                        <label class="text-black" for="bodytype">Gender</label>
+                        {#                        <input type="radio" name="gender" formmethod="post" value="male"> Male#}
+                        {#                        <input type="radio" name="gend" formmethod="post" value="female" > Female<br>#}
+                        <input type="radio" name="gender" value="male"> Male
+                        <input type="radio" name="gender" value="female"> Female
                     </div>
+                    {#                    <div class="col-md-6">#}
+                    {#                        <label class=" text-black" for="branch">Branch</label>#}
+                    {#                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->#}
+                    {#                        <select class="form-control rounded-10">#}
+                    {#                            <option selected>-none-</option>#}
+                    {#                            {% for i in dictionary %}#}
+                    {#                                <option value="{{ i }}">{{ i }} </option>#}
+                    {#                            {% endfor %}#}
+                    {#                        </select>#}
+                    {#                    </div>#}
                     <div class="col-md-6">
-                        <label class="text-black" for="Category">Category</label>
+                        <label class="text-black" for="category">Category</label>
                         <!--<input type="text" id="country" name="country" class="form-control rounded-0" >-->
-                        <select class="form-control rounded-10">
+                        <select name ="cate" class="form-control rounded-10">
                             <option selected>-none-</option>
                             {% for j in dictionary1 %}
                                 <option value="{{ j }}">{{ j }} </option>
@@ -185,13 +192,13 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col-md-12">
-                        <label class="text-black" for="bodytype">Gender</label>
-                        {#                        <input type="radio" name="gender" formmethod="post" value="male"> Male#}
-                        {#                        <input type="radio" name="gend" formmethod="post" value="female" > Female<br>#}
-                        <input type="radio" name="gender" value="male"> Male
-                        <input type="radio" name="gender" value="female"> Female
-                    </div>
+                    {#                    <div class="col-md-12">#}
+                    {#                        <label class="text-black" for="bodytype">Gender</label>#}
+                    {#                        <input type="radio" name="gender" formmethod="post" value="male"> Male#}
+                    {#                        <input type="radio" name="gend" formmethod="post" value="female" > Female<br>#}
+                    {#                        <input type="radio" name="gender" value="male"> Male#}
+                    {#                        <input type="radio" name="gender" value="female"> Female#}
+                    {#                    </div>#}
                 </div>
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
@@ -235,9 +242,19 @@
                     </div>
 
                     <div class="col-md-6">
-                        <label class="text-black" for="fatoccu">Present Branch</label>
-                        <input type="text" id="fatoccu" name="brname" class="form-control rounded-0">
+                        <label class=" text-black" for="branch">Branch</label>
+                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->
+                        <select name="brname" class="form-control rounded-10">
+                            <option selected >-none-</option>
+                            {% for i in dictionary %}
+                                <option value="{{ i }}">{{ i }} </option>
+                            {% endfor %}
+                        </select>
                     </div>
+                    {#                    <div class="col-md-6">#}
+                    {#                        <label class="text-black" for="fatoccu">Present Branch</label>#}
+                    {#                        <input type="text" id="fatoccu" name="brname" class="form-control rounded-0">#}
+                    {#                    </div>#}
                 </div>
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">

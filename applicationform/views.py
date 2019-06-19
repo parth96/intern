@@ -9,7 +9,7 @@ from django.template import RequestContext
 
 def index(request):
     if request.method == "POST":
-         instance = applicationform.objects.create(name = request.POST['name'],email = request.POST['email'],phone = request.POST['phone'],fname = request.POST['fname'],foccu = request.POST['foccu'],bday = request.POST['bday'],gender = request.POST['gender'],desig = request.POST['desig'],cpf = request.POST['cpf'],section = request.POST['section'],city = request.POST['city'],phno = request.POST['phno'],mono = request.POST['mono'],insname = request.POST['insname'],sem = request.POST['sem'],semmarks = request.POST['semmarks'],address = request.POST['address'],menname = request.POST['menname'],des1 = request.POST['des1'],site = request.POST['site'],loc = request.POST['loc'])
+         instance = applicationform.objects.create(name = request.POST['name'],cate = request.POST['cate'],brname = request.POST['brname'],email = request.POST['email'],phone = request.POST['phone'],fname = request.POST['fname'],foccu = request.POST['foccu'],bday = request.POST['bday'],gender = request.POST['gender'],desig = request.POST['desig'],cpf = request.POST['cpf'],section = request.POST['section'],city = request.POST['city'],phno = request.POST['phno'],mono = request.POST['mono'],insname = request.POST['insname'],sem = request.POST['sem'],semmarks = request.POST['semmarks'],address = request.POST['address'],menname = request.POST['menname'],des1 = request.POST['des1'],site = request.POST['site'],loc = request.POST['loc'])
          instance.save()
                                                   # email=request.POST.get('email'),
                                                   # fname=request.POST.get('fname'),
