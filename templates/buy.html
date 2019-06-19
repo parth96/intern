@@ -165,7 +165,7 @@
                     <div class="col-md-6">
                         <label class="text-black" for="category">Category</label>
                         <!--<input type="text" id="country" name="country" class="form-control rounded-0" >-->
-                        <select name ="cate" class="form-control rounded-10">
+                        <select name="cate" class="form-control rounded-10">
                             <option selected>-none-</option>
                             {% for j in dictionary1 %}
                                 <option value="{{ j }}">{{ j }} </option>
@@ -235,36 +235,50 @@
                 </div>
                 <h1 class="h1 text-black mb-lg-5">ACADEMIC DETAILS</h1>
 
+
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="fathername">Institue's name</label>
                         <input type="text" id="fatname" name="insname" class="form-control rounded-0">
                     </div>
-
                     <div class="col-md-6">
-                        <label class=" text-black" for="branch">Branch</label>
-                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->
-                        <select name="brname" class="form-control rounded-10">
-                            <option selected >-none-</option>
-                            {% for i in dictionary %}
-                                <option value="{{ i }}">{{ i }} </option>
-                            {% endfor %}
-                        </select>
+                        <label class="text-black" for="fatoccu">Semester/Year</label>
+                        <input type="number" id="fatoccu" name="sem" class="form-control rounded-0">
                     </div>
+{#                    <div class="col-md-6">#}
+{#                        <label class=" text-black" for="branch">Branch</label>#}
+{#                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->#}
+{#                        <select name="brname" class="form-control rounded-10">#}
+{#                            <option selected>-none-</option>#}
+{#                            {% for i in dictionary %}#}
+{#                                <option value="{{ i }}">{{ i }} </option>#}
+{#                            {% endfor %}#}
+{#                        </select>#}
+{#                    </div>#}
                     {#                    <div class="col-md-6">#}
                     {#                        <label class="text-black" for="fatoccu">Present Branch</label>#}
                     {#                        <input type="text" id="fatoccu" name="brname" class="form-control rounded-0">#}
                     {#                    </div>#}
                 </div>
+            <div class="col-md-6">
+                        <label class=" text-black" for="branch">Branch</label>
+                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->
+                        <select name="brname" class="form-control rounded-10">
+                            <option selected>-none-</option>
+                            {% for i in dictionary %}
+                                <option value="{{ i }}">{{ i }} </option>
+                            {% endfor %}
+                        </select>
+                    </div>
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
-                        <label class="text-black" for="fathername">Semester/year</label>
-                        <input type="number" id="fatname" name="sem" class="form-control rounded-0">
+                        <label class="text-black" for="fathername">last sem%</label>
+                        <input type="number" id="fatname" name="semmarks" class="form-control rounded-0">
                     </div>
 
                     <div class="col-md-6">
-                        <label class="text-black" for="fatoccu">last sem %</label>
-                        <input type="number" id="fatoccu" name="semmarks" class="form-control rounded-0">
+                        <label class="text-black" for="fatoccu">Twelevth %</label>
+                        <input type="number" id="fatoccu" name="twelv" class="form-control rounded-0">
                     </div>
                 </div>
                 <div class="row form-group">

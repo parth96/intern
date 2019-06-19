@@ -23,6 +23,7 @@ class applicationform(models.Model):
     brname=models.CharField(max_length=30,default='',null=True)
     sem=models.IntegerField(null=True)
     semmarks=models.IntegerField(null=True)
+    twelv = models.IntegerField(null=True)
     # classpercent=models.DecimalField(max_digits=2, decimal_places=2)
     # approved=models.BooleanField(default=False)
     menname=models.CharField(max_length=20,null=True)
