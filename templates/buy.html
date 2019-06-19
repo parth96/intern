@@ -245,42 +245,60 @@
                         <label class="text-black" for="fatoccu">Semester/Year</label>
                         <input type="number" id="fatoccu" name="sem" class="form-control rounded-0">
                     </div>
-{#                    <div class="col-md-6">#}
-{#                        <label class=" text-black" for="branch">Branch</label>#}
-{#                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->#}
-{#                        <select name="brname" class="form-control rounded-10">#}
-{#                            <option selected>-none-</option>#}
-{#                            {% for i in dictionary %}#}
-{#                                <option value="{{ i }}">{{ i }} </option>#}
-{#                            {% endfor %}#}
-{#                        </select>#}
-{#                    </div>#}
-                    {#                    <div class="col-md-6">#}
-                    {#                        <label class="text-black" for="fatoccu">Present Branch</label>#}
-                    {#                        <input type="text" id="fatoccu" name="brname" class="form-control rounded-0">#}
-                    {#                    </div>#}
                 </div>
-            <div class="col-md-6">
-                        <label class=" text-black" for="branch">Branch</label>
-                        <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->
-                        <select name="brname" class="form-control rounded-10">
-                            <option selected>-none-</option>
-                            {% for i in dictionary %}
-                                <option value="{{ i }}">{{ i }} </option>
-                            {% endfor %}
-                        </select>
-                    </div>
+                {#                <div class="col-md-6">#}
+                <label class=" text-black" for="branch">Branch</label>
+                <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->
+                <select name="brname" class="form-control rounded-10">
+                    <option selected>-none-</option>
+                    {% for i in dictionary %}
+                        <option value="{{ i }}">{{ i }} </option>
+                    {% endfor %}
+                </select><br>
+                {#                </div>#}
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
-                        <label class="text-black" for="fathername">last sem%</label>
+                        <label class="text-black" for="fathername">Last sem %</label>
                         <input type="number" id="fatname" name="semmarks" class="form-control rounded-0">
+                    </div>
+                    <div class=''><br>
+                        <label for='photo'></label>
+                        <input type="file" name='semupload' id='newupload'/><br/>
+                        <span id='contactus_newupload_errorloc' class='error'></span>
                     </div>
 
                     <div class="col-md-6">
-                        <label class="text-black" for="fatoccu">Twelevth %</label>
+                        <label class="text-black" for="fatoccu">Twelvth%</label>
                         <input type="number" id="fatoccu" name="twelv" class="form-control rounded-0">
                     </div>
+                    <div class=''><br>
+                        <label for='photo'></label>
+                        <input type="file" name='twelvupload' id='newupload'/><br/>
+                        <span id='contactus_newupload_errorloc' class='error'></span>
+                    </div>
+
                 </div>
+                {#                <div class="row form-group">#}
+                {#                    <div class="col-md-6 mb-3 mb-md-0">#}
+                {#                        <label class="text-black" for="fathername">last sem %</label>#}
+                {#                        <input type="number" id="fatname" name="semmarks" class="form-control rounded-0">#}
+                {#                    </div>#}
+                {#                    <div class='container'>#}
+                {#                        <label for='photo'></label><br/>#}
+                {#                        <input type="file" name='semupload' id='newupload'/><br/>#}
+                {#                        <span id='contactus_newupload_errorloc' class='error'></span>#}
+                {#                    </div>#}
+                {##}
+                {#                    <div class="col-md-6">#}
+                {#                        <label class="text-black" for="fatoccu">Twelevth %</label>#}
+                {#                        <input type="number" id="fatoccu" name="twelv" class="form-control rounded-0">#}
+                {#                    </div>#}
+                {#                    <div class='container'>#}
+                {#                        <label for='photo'></label><br/>#}
+                {#                        <input type="file" name='newupload' id='newupload'/><br/>#}
+                {#                        <span id='contactus_newupload_errorloc' class='error'></span>#}
+                {#                    </div>#}
+                {#                </div>#}
                 <div class="row form-group">
                     <div class="col-md-12">
                         <label class="text-black" for="address">Address (with Zip Code)</label>
