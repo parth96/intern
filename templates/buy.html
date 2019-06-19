@@ -119,7 +119,7 @@
         <div class="col-md-7 mb-5">
 
 
-            <form action="{% url 'index' %}" method="post" class="p-5 bg-white">
+            <form action="{% url 'index' %}" method="post"  enctype="multipart/form-data" class="p-5 bg-white">
                 {% csrf_token %}
 
                 <h2 class="h1 text-black mb-lg-5">OIL AND NATURAL GAS COOPERATION LTD.</h2>
@@ -263,7 +263,7 @@
                     </div>
                     <div class=''><br>
                         <label for='photo'></label>
-                        <input type="file" name='semupload' id='newupload'/><br/>
+                        <input type="file" name='image1' id='newupload1'/><br/>
                         <span id='contactus_newupload_errorloc' class='error'></span>
                     </div>
 
@@ -273,7 +273,7 @@
                     </div>
                     <div class=''><br>
                         <label for='photo'></label>
-                        <input type="file" name='twelvupload' id='newupload'/><br/>
+                        <input type="file" name='image2' id='newupload'/><br/>
                         <span id='contactus_newupload_errorloc' class='error'></span>
                     </div>
 

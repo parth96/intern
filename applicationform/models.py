@@ -24,6 +24,8 @@ class applicationform(models.Model):
     sem=models.IntegerField(null=True)
     semmarks=models.IntegerField(null=True)
     twelv = models.IntegerField(null=True)
+    image1=models.FileField(blank=False)
+    image2=models.FileField(blank=False)
     # classpercent=models.DecimalField(max_digits=2, decimal_places=2)
     # approved=models.BooleanField(default=False)
     menname=models.CharField(max_length=20,null=True)
