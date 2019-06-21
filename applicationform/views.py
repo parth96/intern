@@ -9,35 +9,115 @@ from django.template import RequestContext
 
 def index(request):
     if request.method == "POST":
-         instance = applicationform.objects.create(image1=request.FILES['image1'],image2=request.FILES['image2'],name = request.POST['name'],twelv = request.POST['twelv'],cate = request.POST['cate'],brname = request.POST['brname'],email = request.POST['email'],phone = request.POST['phone'],fname = request.POST['fname'],foccu = request.POST['foccu'],bday = request.POST['bday'],gender = request.POST['gender'],desig = request.POST['desig'],cpf = request.POST['cpf'],section = request.POST['section'],city = request.POST['city'],phno = request.POST['phno'],mono = request.POST['mono'],insname = request.POST['insname'],sem = request.POST['sem'],semmarks = request.POST['semmarks'],address = request.POST['address'],menname = request.POST['menname'],des1 = request.POST['des1'],site = request.POST['site'],loc = request.POST['loc'])
-         instance.save()
-                                                  # email=request.POST.get('email'),
-                                                  # fname=request.POST.get('fname'),
-                                                  # foccu=request.POST.get('foccu'),
-                                                  # phone=request.POST.get('phone'),
-                                                  # # bday=request.POST.get('bday'),
-                                                  # gender=request.POST.get('gender'),
-                                                  # desig=request.POST.get('desig'),
-                                                  # cpf=request.POST.get('cpf'),
-                                                  # section=request.POST.get('section'),
-                                                  # city=request.POST.get('city'),
-                                                  # phno=request.POST.get('phno'),
-                                                  # # mono=request.POST.get('mono'),
-                                                  # insname=request.POST.get('insname'),
-                                                  # brname=request.POST.get('brname'),
-                                                  # sem=request.POST.get('sem'),
-                                                  # semmarks=request.POST.get('semmarks'),
-                                                  # address=request.POST.get('address'),
-                                                  # menname=request.POST.get('menname'),
-                                                  # des1=request.POST.get('des1'),
-                                                  # site=request.POST.get('site'),
-                                                  # loc=request.POST.get('loc'))
-
+        ifemployee = request.POST['ifemployee']
+        if (ifemployee == 'Yes'):
+            instance = applicationform.objects.create(image1=request.FILES['image1'],
+                                                      image2=request.FILES['image2'],
+                                                      name=request.POST['name'],
+                                                      twelv=request.POST['twelv'],
+                                                      cate=request.POST['cate'],
+                                                      brname=request.POST['brname'],
+                                                      email=request.POST['email'],
+                                                      contno=request.POST['contno'],
+                                                      fname=request.POST['fname'],
+                                                      foccu=request.POST['foccu'],
+                                                      bday=request.POST['bday'],
+                                                      gender=request.POST['gender'],
+                                                      desig=request.POST['desig'],
+                                                      cpf=request.POST['cpf'],
+                                                      section=request.POST['section'],
+                                                      loca=request.POST['loca'],
+                                                      phno=request.POST['phno'],
+                                                      mono=request.POST['mono'],
+                                                      insname=request.POST['insname'],
+                                                      sem=request.POST['sem'],
+                                                      semmarks=request.POST['semmarks'],
+                                                      address=request.POST['address'],
+                                                      menname=request.POST['menname'],
+                                                      des=request.POST['des'],
+                                                      site=request.POST['site'],
+                                                      loc=request.POST['loc'])
+            instance.save()
+        else:
+            instance = applicationform.objects.create(image1=request.FILES['image1'],
+                                                      image2=request.FILES['image2'],
+                                                      name=request.POST['name'],
+                                                      twelv=request.POST['twelv'],
+                                                      cate=request.POST['cate'],
+                                                      brname=request.POST['brname'],
+                                                      email=request.POST['email'],
+                                                      contno=request.POST['contno'],
+                                                      fname=request.POST['fname'],
+                                                      foccu=request.POST['foccu'],
+                                                      bday=request.POST['bday'],
+                                                      gender=request.POST['gender'],
+                                                      # desig=request.POST['desig'],
+                                                      # cpf=request.POST['cpf'],
+                                                      # section=request.POST['section'],
+                                                      # loca=request.POST['loca'],
+                                                      # phno=request.POST['phno'],
+                                                      # mono=request.POST['mono'],
+                                                      insname=request.POST['insname'],
+                                                      sem=request.POST['sem'],
+                                                      semmarks=request.POST['semmarks'],
+                                                      address=request.POST['address'],
+                                                      menname=request.POST['menname'],
+                                                      des=request.POST['des'],
+                                                      site=request.POST['site'],
+                                                      loc=request.POST['loc'])
+            instance.save()
+        # email=request.POST.get('email'),
+        # fname=request.POST.get('fname'),
+        # foccu=request.POST.get('foccu'),
+        # phone=request.POST.get('phone'),
+        # # bday=request.POST.get('bday'),
+        # gender=request.POST.get('gender'),
+        # desig=request.POST.get('desig'),
+        # cpf=request.POST.get('cpf'),
+        # section=request.POST.get('section'),
+        # city=request.POST.get('city'),
+        # phno=request.POST.get('phno'),
+        # # mono=request.POST.get('mono'),
+        # insname=request.POST.get('insname'),
+        # brname=request.POST.get('brname'),
+        # sem=request.POST.get('sem'),
+        # semmarks=request.POST.get('semmarks'),
+        # address=request.POST.get('address'),
+        # menname=request.POST.get('menname'),
+        # des1=request.POST.get('des1'),
+        # site=request.POST.get('site'),
+        # loc=request.POST.get('loc'))
 
     # if request.method == "POST":
+    #     image1 = request.FILES['image1']
+    #     image2 = request.FILES['image2']
+    #     name = request.POST['name']
+    #     twelv = request.POST['twelv']
+    #     cate = request.POST['cate']
+    #     brname = request.POST['brname']
+    #     email = request.POST['email']
+    #     contno = request.POST['contno']
+    #     fname = request.POST['fname']
+    #     foccu = request.POST['foccu']
+    #     bday = request.POST['bday']
+    #     gender = request.POST['gender']
+    #     desig = request.POST.get['desig']
+    #     cpf = request.POST.get['cpf']
+    #     section = request.POST.get['section']
+    #     loca = request.POST.get['loca']
+    #     phno = request.POST.get['phno']
+    #     mono = request.POST.get['mono']
+    #     insname = request.POST['insname']
+    #     sem = request.POST['sem']
+    #     semmarks = request.POST['semmarks']
+    #     address = request.POST['address']
+    #     menname = request.POST['menname']
+    #     des = request.POST['des']
+    #     site = request.POST['site']
+    #     loc = request.POST['loc']
     #     name = request.POST['name']
     #     email = request.POST['email']
-    #     phone = request.POST['phone']
+    #     phone = request.POST['contno']
     #     fname = request.POST['fname']
     #     foccu = request.POST['foccu']
     #     bday = request.POST['bday']
