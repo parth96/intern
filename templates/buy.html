@@ -127,7 +127,7 @@
                 <div class="row form-group">
                     <div class="col-md-12">
                         <label autofocus="autofocus" class="text-black" for="">Name</label>
-                        <input type="text" id="name" name="name" class="form-control rounded-00"required>
+                        <input type="text" id="name" name="name" class="form-control rounded-00" required>
                     </div>
                 </div>
 
@@ -135,22 +135,22 @@
 
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="email">Email</label>
-                        <input type="email" id="email" name="email" class="form-control rounded-0"required>
+                        <input type="email" id="email" name="email" class="form-control rounded-0" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="text-black" for="contno">Contact Number</label>
                         <input type="text" id="contno" name="contno" pattern=".{10,}"
-                               title="10 digit minimum" class="form-control rounded-0"required>
+                               title="10 digit minimum" class="form-control rounded-0" required>
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col-md-12">
+                    <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="bodytype">Gender</label>
                         {#                        <input type="radio" name="gender" formmethod="post" value="male"> Male#}
                         {#                        <input type="radio" name="gend" formmethod="post" value="female" > Female<br>#}
-                        <input type="radio" name="gender" value="male"required> Male
-                        <input type="radio" name="gender" value="female"required> Female
+                        <input type="radio" name="gender" value="male" required> Male
+                        <input type="radio" name="gender" value="female" required> Female
                     </div>
                     {#                    <div class="col-md-6">#}
                     {#                        <label class=" text-black" for="branch">Branch</label>#}
@@ -163,9 +163,17 @@
                     {#                        </select>#}
                     {#                    </div>#}
                     <div class="col-md-6">
+                        <label class="text-black" for="pic">Upload your Image</label>
+                        <label for='photo'></label>
+                        <input type="file" name='image3' id='newupload2' required/>
+                        <span id='contactus_newupload_errorloc' class='error'></span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-6">
                         <label class="text-black" for="category">Category</label>
                         <!--<input type="text" id="country" name="country" class="form-control rounded-0" >-->
-                        <select name="cate" class="form-control rounded-10"required>
+                        <select name="cate" class="form-control rounded-10" required>
                             <option selected></option>
                             {% for j in dictionary1 %}
                                 <option value="{{ j }}">{{ j }} </option>
@@ -176,19 +184,19 @@
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="fname">Father's name</label>
-                        <input type="text" id="fname" name="fname" class="form-control rounded-0"required>
+                        <input type="text" id="fname" name="fname" class="form-control rounded-0" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="text-black" for="foccu">Father's Occupation</label>
-                        <input type="text" id="foccu" name="foccu" class="form-control rounded-0"required>
+                        <input type="text" id="foccu" name="foccu" class="form-control rounded-0" required>
                     </div>
                 </div>
 
                 <div class="row form-group">
                     <div class="col-md-12">
                         <label class="text-black" for="">Date of Birth</label>
-                        <input type="date" name="bday" class="form-control rounded-0"required>
+                        <input type="date" name="bday" class="form-control rounded-0" required>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -202,44 +210,46 @@
                 </div>
                 <h1 class="h1 text-black ">
                     <small>If Employee of ONGC:-</small>
-                <input onclick="document.getElementById('desig').disabled = false; document.getElementById('phno').disabled = false;document.getElementById('mono').disabled = false;document.getElementById('section').disabled = false;document.getElementById('loca').disabled = false;document.getElementById('cpf').disabled = false;"
-                       type="radio" name="ifemployee" value="Yes" checked="checked"><small>Yes</small>
+                    <input onclick="document.getElementById('desig').disabled = false; document.getElementById('phno').disabled = false;document.getElementById('mono').disabled = false;document.getElementById('section').disabled = false;document.getElementById('loca').disabled = false;document.getElementById('cpf').disabled = false;"
+                           type="radio" name="ifemployee" value="Yes" checked="checked">
+                    <small>Yes</small>
 
-                <input onclick="document.getElementById('desig').disabled = true;document.getElementById('phno').disabled = true;document.getElementById('mono').disabled = true;document.getElementById('section').disabled = true;document.getElementById('loca').disabled = true;document.getElementById('cpf').disabled = true;"
-                        type="radio" name="ifemployee" value="No"><small>No</small>
+                    <input onclick="document.getElementById('desig').disabled = true;document.getElementById('phno').disabled = true;document.getElementById('mono').disabled = true;document.getElementById('section').disabled = true;document.getElementById('loca').disabled = true;document.getElementById('cpf').disabled = true;"
+                           type="radio" name="ifemployee" value="No">
+                    <small>No</small>
 
                 </h1>
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="desig">Designation</label>
-                        <input type="text" id="desig" name="desig" class="form-control rounded-0"required>
+                        <input type="text" id="desig" name="desig" class="form-control rounded-0" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="text-black" for="cpf">CPF</label>
-                        <input type="number" id="cpf" name="cpf" class="form-control rounded-0"required>
+                        <input type="number" id="cpf" name="cpf" class="form-control rounded-0" required>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="section">Section</label>
-                        <input type="text" id="section" name="section" class="form-control rounded-0"required>
+                        <input type="text" id="section" name="section" class="form-control rounded-0" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="text-black" for="loca">Location</label>
-                        <input type="text" id="loca" name="loca" class="form-control rounded-0"required>
+                        <input type="text" id="loca" name="loca" class="form-control rounded-0" required>
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="phno">PhoneNo</label>
-                        <input type="number" id="phno" name="phno" class="form-control rounded-0"required>
+                        <input type="number" id="phno" name="phno" class="form-control rounded-0" required>
                     </div>
 
                     <div class="col-md-6">
                         <label class="text-black" for="mono">MobileNo</label>
-                        <input type="number" id="mono" name="mono" class="form-control rounded-0"required>
+                        <input type="number" id="mono" name="mono" class="form-control rounded-0" required>
                     </div>
                 </div>
 
@@ -251,17 +261,17 @@
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="insname">Institue's name</label>
-                        <input type="text" id="insname" name="insname" class="form-control rounded-0"required>
+                        <input type="text" id="insname" name="insname" class="form-control rounded-0" required>
                     </div>
                     <div class="col-md-6">
                         <label class="text-black" for="sem">Semester/Year</label>
-                        <input type="number" id="sem" name="sem" class="form-control rounded-0"required>
+                        <input type="number" id="sem" name="sem" class="form-control rounded-0" required>
                     </div>
                 </div>
                 {#                <div class="col-md-6">#}
                 <label class=" text-black" for="branch">Branch</label>
                 <!--<input type="text" id="country" name="country" class="form-control rounded-0">-->
-                <select name="brname" class="form-control rounded-10"required>
+                <select name="brname" class="form-control rounded-10" required>
                     <option selected></option>
                     {% for i in dictionary %}
                         <option value="{{ i }}">{{ i }} </option>
@@ -271,7 +281,7 @@
                 <div class="row form-group">
                     <div class="col-md-6 mb-3 mb-md-0">
                         <label class="text-black" for="semmarks">Last sem %</label>
-                        <input type="number" id="semmarks" name="semmarks" class="form-control rounded-0"required>
+                        <input type="number" id="semmarks" name="semmarks" class="form-control rounded-0" required>
                     </div>
                     <div class=''><br>
                         <label for='photo'></label>
@@ -281,7 +291,7 @@
 
                     <div class="col-md-6">
                         <label class="text-black" for="twelv">Twelvth%</label>
-                        <input type="number" id="twelv" name="twelv" class="form-control rounded-0"required>
+                        <input type="number" id="twelv" name="twelv" class="form-control rounded-0" required>
                     </div>
                     <div class=''><br>
                         <label for='photo'></label>
@@ -316,7 +326,7 @@
                         <label class="text-black" for="address">Address (with Zip Code)</label>
                         <textarea name="address" id="address" cols="30" rows="7"
                                   class="form-control rounded-0"
-                                  placeholder="Enter your complete address with landmark"required></textarea>
+                                  placeholder="Enter your complete address with landmark" required></textarea>
                     </div>
                 </div>
                 <div class="row form-group">

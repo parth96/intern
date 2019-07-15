@@ -13,6 +13,7 @@ def index(request):
         if (ifemployee == 'Yes'):
             instance = applicationform.objects.create(image1=request.FILES['image1'],
                                                       image2=request.FILES['image2'],
+                                                      image3=request.FILES['image3'],
                                                       name=request.POST['name'],
                                                       twelv=request.POST['twelv'],
                                                       cate=request.POST['cate'],
@@ -41,6 +42,7 @@ def index(request):
         else:
             instance = applicationform.objects.create(image1=request.FILES['image1'],
                                                       image2=request.FILES['image2'],
+                                                      image3=request.FILES['image3'],
                                                       name=request.POST['name'],
                                                       twelv=request.POST['twelv'],
                                                       cate=request.POST['cate'],
